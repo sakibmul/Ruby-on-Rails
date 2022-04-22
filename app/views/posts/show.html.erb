@@ -1,0 +1,9 @@
+<h1><%= @post.title %></h1>
+    <div>
+        <%= @post.body %>
+    </div>
+<br>
+<%= link_to "Edit Post", edit_post_path(@post) %>
+<br>
+<br>
+<%= button_to "Delete", post_path(@post), method: :delete, :onclick => "return confirm('Are you sure you want to delete this post?')" %>
